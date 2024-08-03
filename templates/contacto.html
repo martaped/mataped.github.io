@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marta Pedriel - Contacto</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #90EE90;
+            color: #0000FF;
+            line-height: 1.6;
+        }
+        header, footer {
+            background-color: #E0FFFF;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #9ACD32;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #0000FF;
+            text-decoration: none;
+            padding: 5px 10px;
+        }
+        .content {
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        form {
+            background-color: #E0FFFF;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"], input[type="email"], textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #9ACD32;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #9ACD32;
+            color: #0000FF;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        input[type="submit"]:hover {
+            background-color: #8FBC8F;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Marta Pedriel</h1>
+        <p>Proyectos de Ciencia de Datos</p>
+    </header>
+    <nav>
+        <a href="/">Inicio</a>
+        <a href="/proyectos">Proyectos</a>
+        <a href="/contacto">Contacto</a>
+        <a href="/acerca">Acerca de</a>
+    </nav>
+    <div class="content">
+        <h2>Contacto</h2>
+        <p>Si deseas ponerte en contacto conmigo, puedes usar el siguiente formulario o mis datos de contacto directos.</p>
+        <form action="/contacto" method="POST">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="asunto">Asunto:</label>
+            <input type="text" id="asunto" name="asunto" required>
+            
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+            
+            <input type="submit" value="Enviar">
+        </form>
+        <div style="margin-top: 20px;">
+            <h3>Datos de contacto directo:</h3>
+            <p>Email: marta.pedriel@example.com</p>
+            <p>Teléfono: +34 123 456 789</p>
+            <p>LinkedIn: linkedin.com/in/marta-pedriel</p>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Marta Pedriel. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

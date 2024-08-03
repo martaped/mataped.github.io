@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marta Pedriel - Acerca de mí</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #90EE90;
+            color: #0000FF;
+            line-height: 1.6;
+        }
+        header, footer {
+            background-color: #E0FFFF;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #9ACD32;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #0000FF;
+            text-decoration: none;
+            padding: 5px 10px;
+        }
+        .content {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #E0FFFF;
+            border-radius: 5px;
+        }
+        h2 {
+            color: #9ACD32;
+        }
+        .contact-links {
+            margin-top: 20px;
+        }
+        .contact-links a {
+            color: #0000FF;
+            text-decoration: none;
+        }
+        .contact-links a:hover {
+            text-decoration: underline;
+        }
+        .portfolio-grid {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .portfolio-item {
+            background-color: #E0FFFF;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .portfolio-image {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .cta-section {
+            text-align: center;
+            margin-top: 40px;
+            background-color: #9ACD32;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #0000FF;
+            color: #FFFFFF;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Marta Pedriel</h1>
+        <p>Proyectos de Ciencia de Datos</p>
+    </header>
+    <nav>
+        <a href="/">Inicio</a>
+        <a href="/proyectos">Proyectos</a>
+        <a href="/contacto">Contacto</a>
+        <a href="/acerca">Acerca de</a>
+    </nav>
+    <div class="content">
+        <h1 class="page-title">Mi Portafolio</h1>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <h2 class="portfolio-title">Internet en Argentina</h2>
+                <p class="portfolio-description">ETL de los datos de Enacom cruzando tambien con datos
+                    censales de Argentina, analizando la penetración de las distintas tecnologías de Internet en Argentina.</p>
+                <iframe title="Penetracion_Internet" width="100%" height="200" src="https://app.powerbi.com/view?r=eyJrIjoiNjY0ZjRmMDItNTNiYi00OTExLThkMWEtNDZjMzY3MDEzZTBkIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9&pageName=ReportSection" frameborder="1" allowFullScreen="true"></iframe>
+            </div>
+            <div class="portfolio-item">
+                <h2 class="portfolio-title">Búsquedas ágiles Aplicación con Python Streamlit</h2>
+                <img src="{{ url_for('static', filename='img/busquedas.jpg') }}" alt="Búsquedas ágiles" class="portfolio-image">
+                <p class="portfolio-description">Realiza las búsquedas sin publicidades y otra opción que informa sobre algún documento txt retorna lista de mails dentro de ese documento.</p>
+                <a href="https://buscar-facil-en-gogle.streamlit.app/" class="view-project">Ver Aplicación</a>
+            </div>
+            <div class="portfolio-item">
+                <h2 class="portfolio-title">Recomendación de Videojuegos</h2>
+                <img src="{{ url_for('static', filename='img/videojuegos.png') }}" width="170" height="170" alt="Recomendación de Videojuegos" class="portfolio-image">
+                <p class="portfolio-description" style="font-size: 12px;">El Sistema de Recomendación de Videojuegos utiliza
+                    un conjunto de datos de juegos, revisiones de usuarios y análisis de sentimiento
+                    para ofrecer recomendaciones personalizadas. Se ha desplegado como una API en
+                    Render para que puedas acceder a sus funciones a través de solicitudes HTTP.
+    
+                    Puedes interactuar con la API utilizando este URL serviciorecome.onrender.com/docs
+                    
+                    Funciones Disponibles
+                    
+                    Juego con mayor cantidad de Horas Información sobre en qué año fue el lanzamiento del juego con más horas jugadas para un género determinado.
+                    
+                    Ranquing de Videojuegos por Usuario por Género de Juego
+                    
+                    Juego Más Recomendado por Usuarios
+                    Esta función te proporciona el juego más recomendado por los usuarios en función de las revisiones positivas y el análisis de sentimiento. Es una excelente manera de descubrir un juego muy valorado por la comunidad de jugadores.
+                    
+                    Juego Menos Recomendado por Usuarios
+                    
+                    Análisis de Sentimiento por Año.</p>
+                <a href="https://serviciorecome.onrender.com/docs" class="view-project">Ver Aplicación</a>
+            </div>
+            <div class="portfolio-item">
+                <h2 class="portfolio-title">Restaurantes mexicanos en EEUU</h2>
+                <iframe title="Restaurantes Mexicanos" width="100%" height="200" src="https://app.powerbi.com/view?r=eyJrIjoiNDc5MmY1YzgtYWMxOC00NjE1LWFiM2QtYzFjMmU0ZTVlYTdkIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9&pageName=ReportSection9896af806c7102e10e41" frameborder="0" allowFullScreen="true"></iframe>
+                <p class="portfolio-description" style="font-size: 12px;">Realizacion de ETL usando los datos de Yelp,
+                    enfocado a analizar los reviews de Restaurantes Mexicanos en EEUU. Con análisis de Sentimiento,
+                    evaluación de estrellas y ubicación geográfica por estados y ciudades.</p>
+            </div>
+            <div class="portfolio-item">
+                <h2 class="portfolio-title">Panel de control de llamadas de un Call Center</h2>
+                <iframe title="Call_Center" width="100%" height="200" src="https://app.powerbi.com/view?r=eyJrIjoiN2M5MDhkNWMtNDhmOC00MmE5LWIxYTItMmU5YWMxM2E3NTM1IiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9&pageName=ReportSection" frameborder="0" allowFullScreen="true"></iframe>
+            </div>
+            
+        </div>
+        <div class="cta-section">
+            <h2>¿Listo para dar vida a sus datos?</h2>
+            <p>Descubra cómo podemos crear visualizaciones impactantes para su negocio.</p>
+            <a href="/contacto" class="cta-button">Solicitar una Demostración</a>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Marta Pedriel. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
